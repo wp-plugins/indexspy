@@ -3,7 +3,7 @@ Contributors: Sonar Bangla
 Donate link: mailto:bizz.sonarbangla@gmail.com
 Tags: Google Index
 Requires at least: 2.8
-Tested up to: 2.9.2
+Tested up to: 3.0beta
 Stable tag: 1.0
 
 Check if google indexed your pages/posts. Must have <a href='http://wordpress.org/extend/plugins/google-sitemap-generator/' target=_blank>XML Sitemap Generator Plugin</a> to work with this plugin.
