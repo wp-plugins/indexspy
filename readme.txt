@@ -1,7 +1,7 @@
 === Plugin Name ===
-Contributors: Sonar Bangla
-Donate link: mailto:bizz.sonarbangla@gmail.com
-Tags: Google Index
+Contributors: Hudson Atwell / Sonar Bangla
+Donate link: mailto:Hudson.Atwell@gmail.com
+Tags: Google Indexing, SEO, Sitemaps,
 Requires at least: 2.8
 Tested up to: 3.0beta
 Stable tag: 1.0
