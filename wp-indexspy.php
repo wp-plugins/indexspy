@@ -70,19 +70,7 @@ function wp_index_spy_options_page(){
 
 		<div class="wrap">
 			<h2>Google Index Spy</h2>
-			<center>
-			    <?php
-				    $link = "http://www.blogsense-wp.com/2/index_spy_ad.php";
-					$ch = curl_init();
-					curl_setopt($ch, CURLOPT_URL, $link);
-					curl_setopt($ch, CURLOPT_HEADER, false);
-					curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-					curl_setopt($ch, CURLOPT_USERAGENT, $agents[rand(0,(count($agents)-1))]);
-					$data = curl_exec($ch);
-					curl_close($ch);
-					echo $data;
-					
-				?>
+			<center>			    
 				
 				<div style='width:800px;text-align:right;padding-bottom:5px;' align=right>
 					<span id=id_export_rss style='cursor:pointer;font-size:10px;'>[export rss]</span>
@@ -98,6 +86,18 @@ function wp_index_spy_options_page(){
 				</div>
 				<input type=hidden id=id_input_urls_store />
 				<br /><br />
+				<?php
+				    $link = "http://www.blogsense-wp.com/2/index_spy_ad.php";
+					$ch = curl_init();
+					curl_setopt($ch, CURLOPT_URL, $link);
+					curl_setopt($ch, CURLOPT_HEADER, false);
+					curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+					curl_setopt($ch, CURLOPT_USERAGENT, $agents[rand(0,(count($agents)-1))]);
+					$data = curl_exec($ch);
+					curl_close($ch);
+					echo $data;
+					
+				?>
 			</center>
 		</div>
 	
