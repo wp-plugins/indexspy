@@ -3,7 +3,7 @@ session_start();
 //include helper functions
 include_once('../../../wp-config.php');
 
-$nav_url = get_option('home')."/wp-content/plugins/wp-indexspy/images/link.gif";
+$nav_url = get_option('home')."/wp-content/plugins/indexspy/images/link.gif";
 
 include('is_helper_functions.php');
 
