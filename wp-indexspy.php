@@ -162,7 +162,7 @@ function sbis_admin_head(){
 			],
 			height: 'auto',
 			viewrecords: true, 
-			caption:'IndexSpy 1.5',
+			caption:'IndexSpy 1.5.3',
 			multiselect: true,
 			rowNum:10000, 
 			//rowList:[1000,2000,3000], 
