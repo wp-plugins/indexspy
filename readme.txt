@@ -29,3 +29,6 @@ Further, a user can select/deselect items in the report to create an rss feed ou
 
 = 1.5 =
 * Released first version.
+
+= 1.5.2 =
+* Renamed plugin name from wp-indexspy to indexspy, and fixed errors resulting from namechange.
