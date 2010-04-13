@@ -1,7 +1,7 @@
 <?php
 /*
 	Plugin Name: IndexSpy-WP
-	Plugin URI: http://www.nohatlabs.com
+	Plugin URI: http://www.nohatlabs.com/indexspy-wp-released/
 	Description: Check if google indexed your pages/posts. Must have <a href='http://wordpress.org/extend/plugins/google-sitemap-generator/' target=_blank>XML Sitemap Generator Plugin</a> to work with this plugin.
 	Version: 1.5.2
 */
