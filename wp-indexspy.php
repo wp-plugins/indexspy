@@ -29,8 +29,8 @@
 -------------------------------------------------------------------------------------------------------------------------------------------*/
 
 $sbis_aul = 8;    //admin user level    // Refer http://codex.wordpress.org/Roles_and_Capabilities
-define('SBIS_PURL',  get_option('siteurl').'/wp-content/plugins/wp-indexspy');
-define('SBIS_PPATH', ABSPATH.'wp-content/plugins/wp-indexspy');
+define('SBIS_PURL',  get_option('siteurl').'/wp-content/plugins/indexspy');
+define('SBIS_PPATH', ABSPATH.'wp-content/plugins/indexspy');
 
 /*----------------------------------------------------------------------------------------------------
 									A D M I N     M E N U
