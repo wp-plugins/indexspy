@@ -3,7 +3,7 @@
 	Plugin Name: IndexSpy-WP
 	Plugin URI: http://www.nohatlabs.com/indexspy-wp-released/
 	Description: Check if google indexed your pages/posts. Must have <a href='http://wordpress.org/extend/plugins/google-sitemap-generator/' target=_blank>XML Sitemap Generator Plugin</a> to work with this plugin.
-	Version: 1.5.3
+	Version: 1.5.4
 */
 
 /*  Copyright YEAR  PLUGIN_AUTHOR_NAME  (email : PLUGIN AUTHOR EMAIL)
@@ -54,7 +54,16 @@ function wp_index_spy_options_page(){
 		if( $key == "_xmlUrl" ) $xmlurl = $opt;
 	}
 	
-	$open = @file_get_contents($xmlurl);
+	//get xml file into string
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, "$xmlurl");
+	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt ($ch, CURLOPT_TIMEOUT, 60);
+	$open = curl_exec($ch);
+	if (!$open)
+    {
+	  $open = @file_get_contents($xmlurl);
+	}
 	
 ?>
 
@@ -88,13 +97,16 @@ function wp_index_spy_options_page(){
 				<br /><br />
 				<?php
 				    $link = "http://www.blogsense-wp.com/2/index_spy_ad.php";
+					 //get xml file into string
 					$ch = curl_init();
-					curl_setopt($ch, CURLOPT_URL, $link);
-					curl_setopt($ch, CURLOPT_HEADER, false);
-					curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-					curl_setopt($ch, CURLOPT_USERAGENT, $agents[rand(0,(count($agents)-1))]);
-					$data = curl_exec($ch);
-					curl_close($ch);
+					curl_setopt($ch, CURLOPT_URL, "$link");
+					curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+					curl_setopt ($ch, CURLOPT_TIMEOUT, 60);
+					$string = curl_exec($ch);
+					if (!$string)
+					{
+						$string = file_get_contents($link);
+					}
 					echo $data;
 					
 				?>
@@ -162,7 +174,7 @@ function sbis_admin_head(){
 			],
 			height: 'auto',
 			viewrecords: true, 
-			caption:'IndexSpy 1.5.3',
+			caption:'IndexSpy 1.5.4',
 			multiselect: true,
 			rowNum:10000, 
 			//rowList:[1000,2000,3000], 
