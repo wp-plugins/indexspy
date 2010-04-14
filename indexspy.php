@@ -60,17 +60,19 @@ else
 	//sitemap url  here
 	$sitemap_url = $_GET['sitemap'];
 	
-	//get xml file into string
+	 //get xml file into string
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, "$sitemap_url");
 	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt ($ch, CURLOPT_FOLLOWLOCATION, 1);
 	curl_setopt ($ch, CURLOPT_TIMEOUT, 60);
 	$string = curl_exec($ch);
-	$linkcount = substr_count($string, "<loc>");
-	//$linkcount=3;
+	if (!$string)
+    {
+	    $string = file_get_contents($sitemap_url);
+	}
 
-	$data = "[";
+	
 	for($key=0;$key<$linkcount;$key++)
 	{
 	  if ( $key & 1 ) {
@@ -94,6 +96,7 @@ else
 		 $status[$key] = '<font color=red><i>unindexed</i></font>';
 	  }
 	  $url[$key] = "<a href='$url[$key]' target=_blank><img src='$nav_url' border=0></a> &nbsp;$url[$key]";
+	  //$data = "[";
 	  //$responce->url = $url[$key]; 
 	  //$responce->status = $status[$key]; 
 	  //$data .= "{url:'$url[$key]',status:'$status[$key]'},";
