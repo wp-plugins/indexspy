@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: Hudson Atwell / Sonar Bangla
 Donate link: mailto:Hudson.Atwell@gmail.com
-Tags: Google Indexing, SEO, Sitemaps, RSS
+Tags: Google Indexing, SEO, Sitemaps, RSS, index, google
 Requires at least: 2.8
 Tested up to: 3.0beta
 Stable tag: 1.5.5
