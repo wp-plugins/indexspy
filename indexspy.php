@@ -67,11 +67,7 @@ else
 	curl_setopt ($ch, CURLOPT_FOLLOWLOCATION, 1);
 	curl_setopt ($ch, CURLOPT_TIMEOUT, 60);
 	$string = curl_exec($ch);
-	if (!$string)
-    {
-	    $string = file_get_contents($sitemap_url);
-	}
-
+	$linkcount = substr_count($string, "<loc>");
 	
 	for($key=0;$key<$linkcount;$key++)
 	{
@@ -108,6 +104,7 @@ else
 	
 $_SESSION['url'] = $url;
 $_SESSION['status'] = $status;
+
 
 echo json_encode($responce); exit;
 //echo '{"url":"http://www.blogsense-wp.com/hosted/testblog/New-Title/","status":"failure"}';
