@@ -3,7 +3,7 @@
 	Plugin Name: IndexSpy-WP
 	Plugin URI: http://www.nohatlabs.com/indexspy-wp-released/
 	Description: Check if google indexed your pages/posts. Must have <a href='http://wordpress.org/extend/plugins/google-sitemap-generator/' target=_blank>XML Sitemap Generator Plugin</a> to work with this plugin.
-	Version: 1.5.4
+	Version: 1.5.5
 */
 
 /*  Copyright YEAR  PLUGIN_AUTHOR_NAME  (email : PLUGIN AUTHOR EMAIL)
@@ -71,7 +71,7 @@ function wp_index_spy_options_page(){
 	
 		<div class="wrap">
 			<h2>Google Index Spy</h2>
-			<div id="message" class="updated fade"><p class="">You Must have <a href='http://wordpress.org/extend/plugins/google-sitemap-generator/' target=_blank>XML Sitemap Generator Plugin</a> activated and a sitemap built to use this plugin.</p></div>
+			<div id="message" class="updated fade"><p class="">You Must have <a href='http://wordpress.org/extend/plugins/google-sitemap-generator/' target=_blank>XML Sitemap Generator Plugin</a> activated and a sitemap built to use this plugin. Also, you must have the CURL class enabled for your server. Please email your hosting provider to enable this service if a XML sitemap is built and you still see this message.</p></div>
 		</div>
 		<?php exit; ?>
 	
@@ -174,7 +174,7 @@ function sbis_admin_head(){
 			],
 			height: 'auto',
 			viewrecords: true, 
-			caption:'IndexSpy 1.5.4',
+			caption:'IndexSpy 1.5.5',
 			multiselect: true,
 			rowNum:10000, 
 			//rowList:[1000,2000,3000], 
