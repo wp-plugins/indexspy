@@ -60,10 +60,6 @@ function wp_index_spy_options_page(){
 	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt ($ch, CURLOPT_TIMEOUT, 60);
 	$open = curl_exec($ch);
-	if (!$open)
-    {
-	  $open = @file_get_contents($xmlurl);
-	}
 	
 ?>
 
@@ -107,7 +103,7 @@ function wp_index_spy_options_page(){
 					{
 						$string = file_get_contents($link);
 					}
-					echo $data;
+					echo $string;
 					
 				?>
 			</center>
