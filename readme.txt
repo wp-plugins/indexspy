@@ -4,7 +4,7 @@ Donate link: mailto:Hudson.Atwell@gmail.com
 Tags: Google Indexing, SEO, Sitemaps, RSS, index, google
 Requires at least: 2.8
 Tested up to: 3.0beta
-Stable tag: 1.5.5
+Stable tag: 1.5.6
 
 Check if google indexed your pages/posts. Must have <a href='http://wordpress.org/extend/plugins/google-sitemap-generator/' target=_blank>XML Sitemap Generator Plugin</a> to work with this plugin.
 
