@@ -58,7 +58,7 @@ if ( $_SESSION['url'] && $_GET['sord'] && $_GET['sidx'] )
 else
 {
 	//sitemap url  here
-	$sitemap_url = $_GET['sitemap'];
+	$sitemap_url = urldecode($_GET['sitemap']);
 	
 	 //get xml file into string
 	$ch = curl_init();

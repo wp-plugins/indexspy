@@ -41,3 +41,6 @@ Further, a user can select/deselect items in the report to create an rss feed ou
 
 = 1.5.5 =
 * Added note to users that CURL must be enabled for your server to use plugin.
+
+= 1.5.6 =
+* changed way sitemape is passed as variable (used urlencode and urldecode)
