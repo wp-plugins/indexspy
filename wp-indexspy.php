@@ -2,7 +2,7 @@
 /*
 	Plugin Name: IndexSpy-WP
 	Plugin URI: http://www.nohatlabs.com/indexspy-wp-released/
-	Description: IndexSpy checks if posts are indexed within google and provides several more userful features to help make use of the data.
+	Description: Check if google indexed your pages/posts. Must have <a href='http://wordpress.org/extend/plugins/google-sitemap-generator/' target=_blank>XML Sitemap Generator Plugin</a> to work with this plugin.
 	Version: 1.5.7
 */
 /*  Copyright YEAR  PLUGIN_AUTHOR_NAME  (email : PLUGIN AUTHOR EMAIL)
@@ -154,7 +154,7 @@ function sbis_admin_head(){
 			],
 			height: 'auto',
 			viewrecords: true, 
-			caption:'IndexSpy 2.0.1',
+			caption:'IndexSpy 2.0.2',
 			multiselect: true,
 			rowNum:10000, 
 			//rowList:[1000,2000,3000], 
@@ -165,18 +165,18 @@ function sbis_admin_head(){
 		
 		jQuery("#id_export_rss").click( function() 
 		{ 
-			var urls; 
-			urls = jQuery("#id_table_indexspy").jqGrid('getGridParam','selarrrow'); 
-			jQuery('#id_input_urls_store').val(urls);
+			var ids; 
+			ids = jQuery("#id_table_indexspy").jqGrid('getGridParam','selarrrow'); 
+			jQuery('#id_input_urls_store').val(ids);
 			jQuery("#id_dialog_create_feed").dialog({
 				//autoOpen:true,
 				buttons: { 						
 				 'Create': function(){
 						var name = jQuery('#id_input_feed_name').val();
 						var description = jQuery('#id_input_feed_description').val();
-						var urls = jQuery('#id_input_urls_store').val();
+						var ids = jQuery('#id_input_urls_store').val();
 						var blogsense_url = '<?php echo $blogsense_url;?>';						
-						jQuery.post("<?php echo SBIS_PURL; ?>/build_feed.php", { feed_name: name, feed_description:description ,	urls: urls },  function(data){
+						jQuery.post("<?php echo SBIS_PURL; ?>/build_feed.php", { feed_name: name, feed_description:description ,	ids: ids },  function(data){
 									 alert("Feed Created: " + data);
 						}); 					
 					 }
