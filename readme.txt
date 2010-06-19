@@ -9,7 +9,7 @@ Stable tag: 2.0.3
 Check if google indexed your pages/posts. Must have <a href='http://wordpress.org/extend/plugins/google-sitemap-generator/' target=_blank>XML Sitemap Generator Plugin</a> to work with this plugin.
 
 == Description ==
-IndexSpy creates a table of all your blog's posts and pages, letting you know what content has been successfully indexed on Google and what content hasn't. IndexSpy also provides tools for creating RSS feeds out of un-indexed items as well as exporting selected items as a copy/pastable list (for your indexing campaigns). Furthermore you can select and delete old un-indexed posts on the fly so as to focus ranking power into your indexed pages.This plugin was originally developed for my users @ <a href="http://www.blogsense-wp.com">BlogSenseWP - Advanced Automation and Content Management</a>
+IndexSpy creates a table of all your blog's posts and pages, letting you know what content has been indexed on Google and what content hasn't. IndexSpy also provides tools for creating RSS feeds out of un-indexed items as well as exporting selected items as a copy/pastable list (for your indexing campaigns). Furthermore you can select and delete old un-indexed posts on the fly so as to focus ranking power into your indexed pages.This plugin was originally developed for my users @ <a href="http://www.blogsense-wp.com">BlogSenseWP - Advanced Automation and Content Management</a>
 
 == Installation ==
 
