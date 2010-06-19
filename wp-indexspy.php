@@ -3,7 +3,7 @@
 	Plugin Name: IndexSpy-WP
 	Plugin URI: http://www.nohatlabs.com/indexspy-wp-released/
 	Description: Check if google indexed your pages/posts. Must have <a href='http://wordpress.org/extend/plugins/google-sitemap-generator/' target=_blank>XML Sitemap Generator Plugin</a> to work with this plugin.
-	Version: 2.0.2
+	Version: 2.0.3
 */
 /*  Copyright YEAR  PLUGIN_AUTHOR_NAME  (email : PLUGIN AUTHOR EMAIL)
     This program is free software; you can redistribute it and/or modify
@@ -111,20 +111,12 @@ function sbis_admin_head(){
 	//getting option/settings from Google XML Sitemaps
 	$options  = get_option('sm_options');
 	$filename = $options["sm_b_filename"];
-	
-	$status   = get_option('sm_status');
-	foreach( $status as $key => $opt ){
-		if( $key == "_xmlPath" ) $xmlpath = $opt;
-		if( $key == "_xmlUrl" ) $xmlurl = $opt;
-	}
-	
-	$blogsense_url = explode($filename, $xmlurl);
-	$blogsense_url = $blogsense_url[0];
+
+
 	
 	$page = $_GET['page'];
 	
 	if( $page=='wp-index-spy' ):
-	$xmlurl = urlencode($xmlurl);
 	?>
 <!--IndexSpy plugin starts-->
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo SBIS_PURL; ?>/js/jqgrid/css/ui.jqgrid.css" />
@@ -154,7 +146,7 @@ function sbis_admin_head(){
 			],
 			height: 'auto',
 			viewrecords: true, 
-			caption:'IndexSpy 2.0.2',
+			caption:'IndexSpy 2.0.3',
 			multiselect: true,
 			rowNum:10000, 
 			//rowList:[1000,2000,3000], 
@@ -174,8 +166,7 @@ function sbis_admin_head(){
 				 'Create': function(){
 						var name = jQuery('#id_input_feed_name').val();
 						var description = jQuery('#id_input_feed_description').val();
-						var ids = jQuery('#id_input_urls_store').val();
-						var blogsense_url = '<?php echo $blogsense_url;?>';						
+						var ids = jQuery('#id_input_urls_store').val();				
 						jQuery.post("<?php echo SBIS_PURL; ?>/build_feed.php", { feed_name: name, feed_description:description ,	ids: ids },  function(data){
 									 alert("Feed Created: " + data);
 						}); 					
