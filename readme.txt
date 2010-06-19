@@ -44,4 +44,4 @@ IndexSpy creates a table of all your blog's posts and pages, letting you know wh
 * changed way sitemape is passed as variable (used urlencode and urldecode)
 
 = 1.5.7 =
-* fixed bug that was placed in during 1.5.5= 2.0.1 =* Eliminated need for XML Sitemap Generator. * Added ability to move selected posts to trash. * Added ability to create list of selected post.* Fixed issue with session variables that caused results of other blogs to display in other boogs if index spy was ran within the same browser session.= 2.0.1 =* Fixed RSS feed building.
+* fixed bug that was placed in during 1.5.5= 2.0.1 =* Eliminated need for XML Sitemap Generator. * Added ability to move selected posts to trash. * Added ability to create list of selected post.* Fixed issue with session variables that caused results of other blogs to display in other boogs if index spy was ran within the same browser session.= 2.0.2 =* Fixed RSS feed building.= 2.0.3 =* Removed error messages if XML Sitemap Generator not found
