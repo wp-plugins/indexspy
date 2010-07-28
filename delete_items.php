@@ -4,7 +4,7 @@ session_start();
 //include helper functions
 include_once('../../../wp-config.php');
 $ids = $_POST['ids'];
-
+$ids = explode(',',$ids);
 if ($ids)
 {
 	foreach ($ids as $k=>$v)
