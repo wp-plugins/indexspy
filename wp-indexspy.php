@@ -3,7 +3,7 @@
 	Plugin Name: IndexSpy-WP
 	Plugin URI: http://www.nohatlabs.com/indexspy-wp-released/
 	Description: Check if google indexed your pages/posts. Must have <a href='http://wordpress.org/extend/plugins/google-sitemap-generator/' target=_blank>XML Sitemap Generator Plugin</a> to work with this plugin.
-	Version: 2.0.4
+	Version: 2.0.5
 */
 /*  Copyright YEAR  PLUGIN_AUTHOR_NAME  (email : PLUGIN AUTHOR EMAIL)
     This program is free software; you can redistribute it and/or modify
@@ -146,7 +146,7 @@ function sbis_admin_head(){
 			],
 			height: 'auto',
 			viewrecords: true, 
-			caption:'IndexSpy 2.0.4',
+			caption:'IndexSpy 2.0.5',
 			multiselect: true,
 			rowNum:10000, 
 			//rowList:[1000,2000,3000], 
@@ -190,6 +190,7 @@ function sbis_admin_head(){
 			if (confirm("Are you sure you want to delete")) {
 				var ids; 
 				ids = jQuery("#id_table_indexspy").jqGrid('getGridParam','selarrrow'); 
+				ids = ids.join(',');
 				jQuery('#id_input_id_store').val(ids);
 				jQuery.post("<?php echo SBIS_PURL; ?>/delete_items.php", {ids: ids },  function(data){
 										 alert("These items were trashed: " + data);
